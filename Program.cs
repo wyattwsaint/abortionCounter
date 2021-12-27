@@ -1,25 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
-using System.Data.SqlClient;
 using MySqlConnector;
 
 namespace abortionCounter
-{
-    internal class Program
+{ 
+    public class Program
     {
         static String date;
         static String previousDate;
         static String timeDiff;
-        static String abortionsForDB;
+        public static String abortionsForDB;
         static double abortionCount;
         static double abortionCountDB;
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            
             getAbortionCountFromDB();
             getElapsedTimeSinceLastExecution();
             calculateTotalAbortionsSinceLastExecution();
